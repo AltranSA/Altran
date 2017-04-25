@@ -1,0 +1,21 @@
+﻿.body {
+    background-color:#E9EBEE;
+}
+
+.fonts-text {
+  font-size:12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.fonts-title {
+    font-size:14px;
+  font-family: 'Roboto', sans-serif;
+}
+.mensajeConfirmacion{
+    border: 1px solid #008000;
+    font-size:10px;
+  font-family: 'Roboto', sans-serif;
+}
+.validation-error {
+    color:red;
+}

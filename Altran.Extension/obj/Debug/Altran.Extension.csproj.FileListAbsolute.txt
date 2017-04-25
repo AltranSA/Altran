@@ -1,0 +1,7 @@
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Extension\bin\Debug\Altran.Extension.dll
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Extension\bin\Debug\Altran.Extension.pdb
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Extension\bin\Debug\Altran.Data.dll
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Extension\bin\Debug\Altran.Data.pdb
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Extension\obj\Debug\Altran.Extension.csprojResolveAssemblyReference.cache
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Extension\obj\Debug\Altran.Extension.dll
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Extension\obj\Debug\Altran.Extension.pdb

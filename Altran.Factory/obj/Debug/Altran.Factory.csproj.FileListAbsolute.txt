@@ -1,0 +1,9 @@
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Factory\bin\Debug\Altran.Factory.dll
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Factory\bin\Debug\Altran.Factory.pdb
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Factory\bin\Debug\Altran.Data.dll
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Factory\bin\Debug\Altran.Data.pdb
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Factory\obj\Debug\Altran.Factory.csprojResolveAssemblyReference.cache
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Factory\obj\Debug\Altran.Factory.dll
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Factory\obj\Debug\Altran.Factory.pdb
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Factory\bin\Debug\ExpresionGenercia.dll
+C:\Users\erikg\documents\visual studio 2015\Projects\Altran\Altran.Factory\bin\Debug\ExpresionGenercia.pdb
