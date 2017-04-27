@@ -22,8 +22,11 @@ namespace Altran.Extension.Control
             _control.DataSource = lista;
             _control.DataBind();
             
-
         }
+
+     
+
+
         public static void GetData<T>(this DropDownList _control) where T : class
         {
             DCAltranDataContext contexto = new DCAltranDataContext();

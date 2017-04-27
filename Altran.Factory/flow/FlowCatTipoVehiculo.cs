@@ -109,6 +109,23 @@ namespace Altran.Factory.flow
             }
             return tipoVehiculo;
         }
+
+        public CatTipoVehiculo GetEntityById(int id)
+        {
+            CatTipoVehiculo tipoVehiculo = null;
+            try
+            {
+                using (DCAltranDataContext contexto = new DCAltranDataContext())
+                {
+                    tipoVehiculo = contexto.CatTipoVehiculos.Where(p => p.id == id).First<CatTipoVehiculo>();
+                }
+            }
+            catch (Exception ex)
+            {
+                string mensajeErr = ex.Message;
+            }
+            return tipoVehiculo;
+        }
     }
 
 }

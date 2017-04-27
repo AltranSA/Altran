@@ -302,4 +302,25 @@
       <Association Name="CatNacionalidad_CatEmpleado" Member="CatEmpleados" ThisKey="id" OtherKey="idNacionalidad" Type="CatEmpleado" />
     </Type>
   </Table>
+  <Table Name="dbo.CatEmpresa" Member="CatEmpresas">
+    <Type Name="CatEmpresa">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="strNombre" Type="System.String" DbType="VarChar(350) NOT NULL" CanBeNull="false" />
+      <Column Name="strRfc" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="strDireccionFiscal" Type="System.String" DbType="VarChar(550)" CanBeNull="true" />
+      <Column Name="idTelefono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="strEmail" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="strFax" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="CatEmpresa_CatProyectoEmpresa" Member="CatProyectoEmpresas" ThisKey="id" OtherKey="idEmpresa" Type="CatProyectoEmpresa" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CatProyectoEmpresa" Member="CatProyectoEmpresas">
+    <Type Name="CatProyectoEmpresa">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="strValor" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="strNumeroContrato" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="idEmpresa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CatEmpresa_CatProyectoEmpresa" Member="CatEmpresa" ThisKey="idEmpresa" OtherKey="id" Type="CatEmpresa" IsForeignKey="true" />
+    </Type>
+  </Table>
 </Database>

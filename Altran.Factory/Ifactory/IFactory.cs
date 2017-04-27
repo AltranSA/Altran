@@ -15,6 +15,6 @@ namespace Altran.Factory.Ifactory
         bool Delete(T entidad);
         bool upadte(T entidad);
         List<T> GetListData();
-       
+        T GetEntityById(int id);
     }
 }

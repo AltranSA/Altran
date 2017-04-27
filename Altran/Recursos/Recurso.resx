@@ -123,6 +123,10 @@
   <data name="Empleado" xml:space="preserve">
     <value>Empleado</value>
   </data>
+  <data name="Error_547" xml:space="preserve">
+    <value> 547</value>
+    <comment>Error al tratar de eliminar un catalogo relacionado.</comment>
+  </data>
   <data name="IDEmpleado" xml:space="preserve">
     <value>IdEmpleado</value>
   </data>

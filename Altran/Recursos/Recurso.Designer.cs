@@ -79,6 +79,15 @@ namespace Altran.Recursos {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to  547.
+        /// </summary>
+        internal static string Error_547 {
+            get {
+                return ResourceManager.GetString("Error_547", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to IdEmpleado.
         /// </summary>
         internal static string IDEmpleado {

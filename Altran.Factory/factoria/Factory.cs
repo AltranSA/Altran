@@ -110,6 +110,22 @@ namespace Altran.Factory.factoria
 
         }
 
-        
+        public T GetEntityById(int id) 
+        {
+            
+            try
+            {
+                using (DCAltranDataContext contexto = new DCAltranDataContext())
+                {
+                     var entidad = contexto.GetTable<T>().Where(p => p.id == id).First<T>();
+                    return entidad;
+                }
+            }
+            catch (Exception ex)
+            {
+                string mensajeErr = ex.Message;
+                return null;
+            }
+        }
     }
 }

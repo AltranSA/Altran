@@ -359,6 +359,8 @@ namespace Altran.UI.Empleado
             {
                 sesionManager = (SessionManager)this.Session[Recurso.Manager];
                 int idEmpleado = (int)sesionManager.Parametros[Recurso.IDEmpleado];
+                
+                
                 //creamos el objeto de factoria para insertar
                 IFactory<TblTarjetaBancaria> ifactoryTB = new Factory<TblTarjetaBancaria>();
                 ifactoryTB.Insert(this.GetDatosTarjetaBancaria(idEmpleado, this.idBanco, this.idMovimiento));///pasamos la entidad de tarjeta bancaria
@@ -377,7 +379,7 @@ namespace Altran.UI.Empleado
 
         protected void AsyncFpdArchivo_UploadedComplete(object sender, AjaxControlToolkit.AsyncFileUploadEventArgs e)
         {
-            path = Server.MapPath(Recurso.Documentos);
+            path = Server.MapPath(Recurso.Documentos); 
             if (this.AsyncFpdArchivo.HasFile)
             {
                 
