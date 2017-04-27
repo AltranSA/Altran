@@ -46,6 +46,7 @@
     <Compile Include="factoria\FactoryExpresionCatCodigoPostal.cs" />
     <Compile Include="factoria\FactoryExpresionCatColonia.cs" />
     <Compile Include="factoria\FactoryExpresionCatEmpleado.cs" />
+    <Compile Include="factoria\FactoryExpresionCatEmpresa.cs" />
     <Compile Include="factoria\FactoryExpresionCatEstado.cs" />
     <Compile Include="factoria\FactoryExpresionCatMunicipio.cs" />
     <Compile Include="factoria\FactoryExpresionPais.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="flow\FlowCatCodigoPostal.cs" />
     <Compile Include="flow\FlowCatColonia.cs" />
     <Compile Include="flow\FlowCatEmpleado.cs" />
+    <Compile Include="flow\FlowCatEmpresa.cs" />
     <Compile Include="flow\FlowCatEstados.cs" />
     <Compile Include="flow\FlowCatMunicipio.cs" />
     <Compile Include="flow\FlowCatPais.cs" />

@@ -49,6 +49,7 @@
     <Compile Include="Entities\CatBanco.cs" />
     <Compile Include="Entities\CatDocumentoCertifica.cs" />
     <Compile Include="Entities\CatEmpleado.cs" />
+    <Compile Include="Entities\CatEmpresa.cs" />
     <Compile Include="Entities\CatMarcaVehiculo.cs" />
     <Compile Include="Entities\CatModeloVehiculo.cs" />
     <Compile Include="Entities\CatMovimiento.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Entities\CatNivelEscolar.cs" />
     <Compile Include="Entities\CatParentesco.cs" />
     <Compile Include="Entities\CatProfesion.cs" />
+    <Compile Include="Entities\CatProyectoEmpresa.cs" />
     <Compile Include="Entities\CatStatusEscolar.cs" />
     <Compile Include="Entities\CatTipoSangre.cs" />
     <Compile Include="Entities\CatTipoVehiculo.cs" />

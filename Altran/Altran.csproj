@@ -265,6 +265,7 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="UI\Empleado\agregar.aspx" />
+    <Content Include="UI\Empresa\agregar.aspx" />
     <Content Include="UI\Vehiculo\agregar.aspx" />
     <Content Include="UI\Vehiculo\tarjetavehicular.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -449,6 +450,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UI\Empleado\agregar.aspx.designer.cs">
+      <DependentUpon>agregar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Empresa\agregar.aspx.cs">
+      <DependentUpon>agregar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Empresa\agregar.aspx.designer.cs">
       <DependentUpon>agregar.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\Vehiculo\agregar.aspx.cs">
