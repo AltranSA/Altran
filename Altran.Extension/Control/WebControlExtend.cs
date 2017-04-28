@@ -67,6 +67,10 @@ namespace Altran.Extension.Control
             return Convert.ToDecimal(_control.Text.Trim());
         }
 
+        public static Int64 ConvertInt64(this TextBox _control)
+        {
+            return Int64.Parse(_control.Text.ToString().Trim());
+        }
         public static int ConvertInt(this TextBox _control)
         {
             return int.Parse(_control.Text.ToString().Trim());
