@@ -52,6 +52,7 @@
     <Compile Include="factoria\FactoryExpresionPais.cs" />
     <Compile Include="factoria\FactoryExpresionTblTarjetaBancaria.cs" />
     <Compile Include="factoria\FactoryExpressionTblFamiliares.cs" />
+    <Compile Include="factoria\FactoryExpressionTblVehiculo.cs" />
     <Compile Include="flow\FlowCatCodigoPostal.cs" />
     <Compile Include="flow\FlowCatColonia.cs" />
     <Compile Include="flow\FlowCatEmpleado.cs" />
@@ -64,10 +65,12 @@
     <Compile Include="flow\flowModeloVehiculo.cs" />
     <Compile Include="flow\FlowTblDatosFamiliares.cs" />
     <Compile Include="flow\FlowTblTarjetaBancaria.cs" />
+    <Compile Include="flow\FlowTblVehiculo.cs" />
     <Compile Include="Ifactory\IFactory.cs" />
     <Compile Include="Ifactory\IFactoryCatEmpleado.cs" />
     <Compile Include="Ifactory\IFactoryTblFamiliares.cs" />
     <Compile Include="Ifactory\IFactoryTblTarjetaBancaria.cs" />
+    <Compile Include="Ifactory\IFactoryTblVehiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

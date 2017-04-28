@@ -51,8 +51,20 @@
       <Association Name="CatEmpleado_TblFamiliar" Member="TblFamiliars" ThisKey="id" OtherKey="idEmpleado" Type="TblFamiliar" />
       <Association Name="CatEmpleado_TblPerfilEstudio" Member="TblPerfilEstudios" ThisKey="id" OtherKey="idEmpleado" Type="TblPerfilEstudio" />
       <Association Name="CatEmpleado_TblTarjetaBancaria" Member="TblTarjetaBancarias" ThisKey="id" OtherKey="idEmpleado" Type="TblTarjetaBancaria" />
-      <Association Name="CatTipoSangre_CatEmpleado" Member="CatTipoSangre" ThisKey="idTipoSangre" OtherKey="id" Type="CatTipoSangre" IsForeignKey="true" />
       <Association Name="CatNacionalidad_CatEmpleado" Member="CatNacionalidad" ThisKey="idNacionalidad" OtherKey="id" Type="CatNacionalidad" IsForeignKey="true" />
+      <Association Name="CatTipoSangre_CatEmpleado" Member="CatTipoSangre" ThisKey="idTipoSangre" OtherKey="id" Type="CatTipoSangre" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CatEmpresa" Member="CatEmpresas">
+    <Type Name="CatEmpresa">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="strNombre" Type="System.String" DbType="VarChar(350) NOT NULL" CanBeNull="false" />
+      <Column Name="strRfc" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="strDireccionFiscal" Type="System.String" DbType="VarChar(550)" CanBeNull="true" />
+      <Column Name="strTelefono" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="strEmail" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="strFax" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="CatEmpresa_CatProyectoEmpresa" Member="CatProyectoEmpresas" ThisKey="id" OtherKey="idEmpresa" Type="CatProyectoEmpresa" />
     </Type>
   </Table>
   <Table Name="dbo.CatEstado" Member="CatEstados">
@@ -68,7 +80,7 @@
     <Type Name="CatMarcaVehiculo">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="strValor" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Association Name="CatMarcaVehiculo_CatModeloVehiculo" Member="CatModeloVehiculos" ThisKey="id" OtherKey="idMarca" Type="CatModeloVehiculo" />
+      <Association Name="CatMarcaVehiculo_CatModeloVehiculo" Member="CatModeloVehiculos" Modifier="New" ThisKey="id" OtherKey="idMarca" Type="CatModeloVehiculo" />
     </Type>
   </Table>
   <Table Name="dbo.CatModeloVehiculo" Member="CatModeloVehiculos">
@@ -77,7 +89,7 @@
       <Column Name="strValor" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
       <Column Name="idMarca" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="CatModeloVehiculo_TblVehiculo" Member="TblVehiculos" ThisKey="id" OtherKey="idModelo" Type="TblVehiculo" />
-      <Association Name="CatMarcaVehiculo_CatModeloVehiculo" Member="CatMarcaVehiculo" ThisKey="idMarca" OtherKey="id" Type="CatMarcaVehiculo" IsForeignKey="true" />
+      <Association Name="CatMarcaVehiculo_CatModeloVehiculo" Member="CatMarcaVehiculo" Modifier="New" ThisKey="idMarca" OtherKey="id" Type="CatMarcaVehiculo" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CatMovimientos" Member="CatMovimientos">
@@ -95,6 +107,13 @@
       <Column Name="idEstado" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="CatMunicipio_CatColonia" Member="CatColonias" ThisKey="id" OtherKey="idMunicipio" Type="CatColonia" />
       <Association Name="CatEstado_CatMunicipio" Member="CatEstado" ThisKey="idEstado" OtherKey="id" Type="CatEstado" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CatNacionalidad" Member="CatNacionalidads">
+    <Type Name="CatNacionalidad">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="strValor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="CatNacionalidad_CatEmpleado" Member="CatEmpleados" ThisKey="id" OtherKey="idNacionalidad" Type="CatEmpleado" />
     </Type>
   </Table>
   <Table Name="dbo.CatNivelEscolar" Member="CatNivelEscolars">
@@ -128,6 +147,15 @@
       <Association Name="CatProfesion_TblEstudio" Member="TblEstudios" ThisKey="id" OtherKey="idProfesion" Type="TblEstudio" />
     </Type>
   </Table>
+  <Table Name="dbo.CatProyectoEmpresa" Member="CatProyectoEmpresas">
+    <Type Name="CatProyectoEmpresa">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="strValor" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="strNumeroContrato" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="idEmpresa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CatEmpresa_CatProyectoEmpresa" Member="CatEmpresa" ThisKey="idEmpresa" OtherKey="id" Type="CatEmpresa" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.CatStatusEscolar" Member="CatStatusEscolars">
     <Type Name="CatStatusEscolar">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -155,6 +183,30 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="strValor" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
       <Association Name="CatTipoVehiculo_TblVehiculo" Member="TblVehiculos" ThisKey="id" OtherKey="idTipoVehiculo" Type="TblVehiculo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblBitacoraDetalleVehiculo" Member="TblBitacoraDetalleVehiculos">
+    <Type Name="TblBitacoraDetalleVehiculo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idVehiculo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idBitacoraMantenimiento" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dteFecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="TblBitacoraMantenimientoVehiculo_TblBitacoraDetalleVehiculo" Member="TblBitacoraMantenimientoVehiculo" ThisKey="idBitacoraMantenimiento" OtherKey="id" Type="TblBitacoraMantenimientoVehiculo" IsForeignKey="true" />
+      <Association Name="TblVehiculo_TblBitacoraDetalleVehiculo" Member="TblVehiculo" ThisKey="idVehiculo" OtherKey="id" Type="TblVehiculo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblBitacoraMantenimientoVehiculo" Member="TblBitacoraMantenimientoVehiculos">
+    <Type Name="TblBitacoraMantenimientoVehiculo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dteFecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="strClasificacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strKilometrajeAlMomento" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strTrabajoRealizado" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="strMecanico" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="dceCosto" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="dteFechaProximoMantenimiento" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="strNotas" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="TblBitacoraMantenimientoVehiculo_TblBitacoraDetalleVehiculo" Member="TblBitacoraDetalleVehiculos" ThisKey="id" OtherKey="idBitacoraMantenimiento" Type="TblBitacoraDetalleVehiculo" />
     </Type>
   </Table>
   <Table Name="dbo.TblContactoAccidente" Member="TblContactoAccidentes">
@@ -289,38 +341,12 @@
       <Column Name="dceKmLitros" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
       <Column Name="dceCapacidadCombus" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
       <Column Name="dceRendimiento" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="strPlacas" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="idTipoVehiculo" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="idModelo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="CatModeloVehiculo_TblVehiculo" Member="CatModeloVehiculo" ThisKey="idModelo" OtherKey="id" Type="CatModeloVehiculo" IsForeignKey="true" />
+      <Association Name="TblVehiculo_TblBitacoraDetalleVehiculo" Member="TblBitacoraDetalleVehiculos" ThisKey="id" OtherKey="idVehiculo" Type="TblBitacoraDetalleVehiculo" />
+      <Association Name="CatModeloVehiculo_TblVehiculo" Member="CatModeloVehiculo" Modifier="New" ThisKey="idModelo" OtherKey="id" Type="CatModeloVehiculo" IsForeignKey="true" />
       <Association Name="CatTipoVehiculo_TblVehiculo" Member="CatTipoVehiculo" ThisKey="idTipoVehiculo" OtherKey="id" Type="CatTipoVehiculo" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.CatNacionalidad" Member="CatNacionalidads">
-    <Type Name="CatNacionalidad">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="strValor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="CatNacionalidad_CatEmpleado" Member="CatEmpleados" ThisKey="id" OtherKey="idNacionalidad" Type="CatEmpleado" />
-    </Type>
-  </Table>
-  <Table Name="dbo.CatProyectoEmpresa" Member="CatProyectoEmpresas">
-    <Type Name="CatProyectoEmpresa">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="strValor" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
-      <Column Name="strNumeroContrato" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="idEmpresa" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="CatEmpresa_CatProyectoEmpresa" Member="CatEmpresa" ThisKey="idEmpresa" OtherKey="id" Type="CatEmpresa" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.CatEmpresa" Member="CatEmpresas">
-    <Type Name="CatEmpresa">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="strNombre" Type="System.String" DbType="VarChar(350) NOT NULL" CanBeNull="false" />
-      <Column Name="strRfc" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="strDireccionFiscal" Type="System.String" DbType="VarChar(550)" CanBeNull="true" />
-      <Column Name="strTelefono" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="strEmail" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="strFax" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="CatEmpresa_CatProyectoEmpresa" Member="CatProyectoEmpresas" ThisKey="id" OtherKey="idEmpresa" Type="CatProyectoEmpresa" />
     </Type>
   </Table>
 </Database>

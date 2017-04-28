@@ -40,6 +40,9 @@ namespace Altran.Data
     partial void InsertCatEmpleado(Altran.Data.Entities.CatEmpleado instance);
     partial void UpdateCatEmpleado(Altran.Data.Entities.CatEmpleado instance);
     partial void DeleteCatEmpleado(Altran.Data.Entities.CatEmpleado instance);
+    partial void InsertCatEmpresa(Altran.Data.Entities.CatEmpresa instance);
+    partial void UpdateCatEmpresa(Altran.Data.Entities.CatEmpresa instance);
+    partial void DeleteCatEmpresa(Altran.Data.Entities.CatEmpresa instance);
     partial void InsertCatEstado(Altran.Data.Entities.CatEstado instance);
     partial void UpdateCatEstado(Altran.Data.Entities.CatEstado instance);
     partial void DeleteCatEstado(Altran.Data.Entities.CatEstado instance);
@@ -55,6 +58,9 @@ namespace Altran.Data
     partial void InsertCatMunicipio(Altran.Data.Entities.CatMunicipio instance);
     partial void UpdateCatMunicipio(Altran.Data.Entities.CatMunicipio instance);
     partial void DeleteCatMunicipio(Altran.Data.Entities.CatMunicipio instance);
+    partial void InsertCatNacionalidad(Altran.Data.Entities.CatNacionalidad instance);
+    partial void UpdateCatNacionalidad(Altran.Data.Entities.CatNacionalidad instance);
+    partial void DeleteCatNacionalidad(Altran.Data.Entities.CatNacionalidad instance);
     partial void InsertCatNivelEscolar(Altran.Data.Entities.CatNivelEscolar instance);
     partial void UpdateCatNivelEscolar(Altran.Data.Entities.CatNivelEscolar instance);
     partial void DeleteCatNivelEscolar(Altran.Data.Entities.CatNivelEscolar instance);
@@ -67,6 +73,9 @@ namespace Altran.Data
     partial void InsertCatProfesion(Altran.Data.Entities.CatProfesion instance);
     partial void UpdateCatProfesion(Altran.Data.Entities.CatProfesion instance);
     partial void DeleteCatProfesion(Altran.Data.Entities.CatProfesion instance);
+    partial void InsertCatProyectoEmpresa(Altran.Data.Entities.CatProyectoEmpresa instance);
+    partial void UpdateCatProyectoEmpresa(Altran.Data.Entities.CatProyectoEmpresa instance);
+    partial void DeleteCatProyectoEmpresa(Altran.Data.Entities.CatProyectoEmpresa instance);
     partial void InsertCatStatusEscolar(Altran.Data.Entities.CatStatusEscolar instance);
     partial void UpdateCatStatusEscolar(Altran.Data.Entities.CatStatusEscolar instance);
     partial void DeleteCatStatusEscolar(Altran.Data.Entities.CatStatusEscolar instance);
@@ -79,6 +88,12 @@ namespace Altran.Data
     partial void InsertCatTipoVehiculo(Altran.Data.Entities.CatTipoVehiculo instance);
     partial void UpdateCatTipoVehiculo(Altran.Data.Entities.CatTipoVehiculo instance);
     partial void DeleteCatTipoVehiculo(Altran.Data.Entities.CatTipoVehiculo instance);
+    partial void InsertTblBitacoraDetalleVehiculo(Altran.Data.Entities.TblBitacoraDetalleVehiculo instance);
+    partial void UpdateTblBitacoraDetalleVehiculo(Altran.Data.Entities.TblBitacoraDetalleVehiculo instance);
+    partial void DeleteTblBitacoraDetalleVehiculo(Altran.Data.Entities.TblBitacoraDetalleVehiculo instance);
+    partial void InsertTblBitacoraMantenimientoVehiculo(Altran.Data.Entities.TblBitacoraMantenimientoVehiculo instance);
+    partial void UpdateTblBitacoraMantenimientoVehiculo(Altran.Data.Entities.TblBitacoraMantenimientoVehiculo instance);
+    partial void DeleteTblBitacoraMantenimientoVehiculo(Altran.Data.Entities.TblBitacoraMantenimientoVehiculo instance);
     partial void InsertTblContactoAccidente(Altran.Data.Entities.TblContactoAccidente instance);
     partial void UpdateTblContactoAccidente(Altran.Data.Entities.TblContactoAccidente instance);
     partial void DeleteTblContactoAccidente(Altran.Data.Entities.TblContactoAccidente instance);
@@ -109,15 +124,6 @@ namespace Altran.Data
     partial void InsertTblVehiculo(Altran.Data.Entities.TblVehiculo instance);
     partial void UpdateTblVehiculo(Altran.Data.Entities.TblVehiculo instance);
     partial void DeleteTblVehiculo(Altran.Data.Entities.TblVehiculo instance);
-    partial void InsertCatNacionalidad(Altran.Data.Entities.CatNacionalidad instance);
-    partial void UpdateCatNacionalidad(Altran.Data.Entities.CatNacionalidad instance);
-    partial void DeleteCatNacionalidad(Altran.Data.Entities.CatNacionalidad instance);
-    partial void InsertCatProyectoEmpresa(Altran.Data.Entities.CatProyectoEmpresa instance);
-    partial void UpdateCatProyectoEmpresa(Altran.Data.Entities.CatProyectoEmpresa instance);
-    partial void DeleteCatProyectoEmpresa(Altran.Data.Entities.CatProyectoEmpresa instance);
-    partial void InsertCatEmpresa(Altran.Data.Entities.CatEmpresa instance);
-    partial void UpdateCatEmpresa(Altran.Data.Entities.CatEmpresa instance);
-    partial void DeleteCatEmpresa(Altran.Data.Entities.CatEmpresa instance);
     #endregion
 		
 		public DCAltranDataContext() : 
@@ -182,6 +188,14 @@ namespace Altran.Data
 			}
 		}
 		
+		public System.Data.Linq.Table<Altran.Data.Entities.CatEmpresa> CatEmpresas
+		{
+			get
+			{
+				return this.GetTable<Altran.Data.Entities.CatEmpresa>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Altran.Data.Entities.CatEstado> CatEstados
 		{
 			get
@@ -222,6 +236,14 @@ namespace Altran.Data
 			}
 		}
 		
+		public System.Data.Linq.Table<Altran.Data.Entities.CatNacionalidad> CatNacionalidads
+		{
+			get
+			{
+				return this.GetTable<Altran.Data.Entities.CatNacionalidad>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Altran.Data.Entities.CatNivelEscolar> CatNivelEscolars
 		{
 			get
@@ -254,6 +276,14 @@ namespace Altran.Data
 			}
 		}
 		
+		public System.Data.Linq.Table<Altran.Data.Entities.CatProyectoEmpresa> CatProyectoEmpresas
+		{
+			get
+			{
+				return this.GetTable<Altran.Data.Entities.CatProyectoEmpresa>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Altran.Data.Entities.CatStatusEscolar> CatStatusEscolars
 		{
 			get
@@ -283,6 +313,22 @@ namespace Altran.Data
 			get
 			{
 				return this.GetTable<Altran.Data.Entities.CatTipoVehiculo>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Altran.Data.Entities.TblBitacoraDetalleVehiculo> TblBitacoraDetalleVehiculos
+		{
+			get
+			{
+				return this.GetTable<Altran.Data.Entities.TblBitacoraDetalleVehiculo>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Altran.Data.Entities.TblBitacoraMantenimientoVehiculo> TblBitacoraMantenimientoVehiculos
+		{
+			get
+			{
+				return this.GetTable<Altran.Data.Entities.TblBitacoraMantenimientoVehiculo>();
 			}
 		}
 		
@@ -363,30 +409,6 @@ namespace Altran.Data
 			get
 			{
 				return this.GetTable<Altran.Data.Entities.TblVehiculo>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Altran.Data.Entities.CatNacionalidad> CatNacionalidads
-		{
-			get
-			{
-				return this.GetTable<Altran.Data.Entities.CatNacionalidad>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Altran.Data.Entities.CatProyectoEmpresa> CatProyectoEmpresas
-		{
-			get
-			{
-				return this.GetTable<Altran.Data.Entities.CatProyectoEmpresa>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Altran.Data.Entities.CatEmpresa> CatEmpresas
-		{
-			get
-			{
-				return this.GetTable<Altran.Data.Entities.CatEmpresa>();
 			}
 		}
 	}
@@ -904,9 +926,9 @@ namespace Altran.Data.Entities
 		
 		private EntitySet<TblTarjetaBancaria> _TblTarjetaBancarias;
 		
-		private EntityRef<CatTipoSangre> _CatTipoSangre;
-		
 		private EntityRef<CatNacionalidad> _CatNacionalidad;
+		
+		private EntityRef<CatTipoSangre> _CatTipoSangre;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -957,8 +979,8 @@ namespace Altran.Data.Entities
 			this._TblFamiliars = new EntitySet<TblFamiliar>(new Action<TblFamiliar>(this.attach_TblFamiliars), new Action<TblFamiliar>(this.detach_TblFamiliars));
 			this._TblPerfilEstudios = new EntitySet<TblPerfilEstudio>(new Action<TblPerfilEstudio>(this.attach_TblPerfilEstudios), new Action<TblPerfilEstudio>(this.detach_TblPerfilEstudios));
 			this._TblTarjetaBancarias = new EntitySet<TblTarjetaBancaria>(new Action<TblTarjetaBancaria>(this.attach_TblTarjetaBancarias), new Action<TblTarjetaBancaria>(this.detach_TblTarjetaBancarias));
-			this._CatTipoSangre = default(EntityRef<CatTipoSangre>);
 			this._CatNacionalidad = default(EntityRef<CatNacionalidad>);
+			this._CatTipoSangre = default(EntityRef<CatTipoSangre>);
 			OnCreated();
 		}
 		
@@ -1401,40 +1423,6 @@ namespace Altran.Data.Entities
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatTipoSangre_CatEmpleado", Storage="_CatTipoSangre", ThisKey="idTipoSangre", OtherKey="id", IsForeignKey=true)]
-		public CatTipoSangre CatTipoSangre
-		{
-			get
-			{
-				return this._CatTipoSangre.Entity;
-			}
-			set
-			{
-				CatTipoSangre previousValue = this._CatTipoSangre.Entity;
-				if (((previousValue != value) 
-							|| (this._CatTipoSangre.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._CatTipoSangre.Entity = null;
-						previousValue.CatEmpleados.Remove(this);
-					}
-					this._CatTipoSangre.Entity = value;
-					if ((value != null))
-					{
-						value.CatEmpleados.Add(this);
-						this._idTipoSangre = value.id;
-					}
-					else
-					{
-						this._idTipoSangre = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("CatTipoSangre");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatNacionalidad_CatEmpleado", Storage="_CatNacionalidad", ThisKey="idNacionalidad", OtherKey="id", IsForeignKey=true)]
 		public CatNacionalidad CatNacionalidad
 		{
@@ -1465,6 +1453,40 @@ namespace Altran.Data.Entities
 						this._idNacionalidad = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("CatNacionalidad");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatTipoSangre_CatEmpleado", Storage="_CatTipoSangre", ThisKey="idTipoSangre", OtherKey="id", IsForeignKey=true)]
+		public CatTipoSangre CatTipoSangre
+		{
+			get
+			{
+				return this._CatTipoSangre.Entity;
+			}
+			set
+			{
+				CatTipoSangre previousValue = this._CatTipoSangre.Entity;
+				if (((previousValue != value) 
+							|| (this._CatTipoSangre.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._CatTipoSangre.Entity = null;
+						previousValue.CatEmpleados.Remove(this);
+					}
+					this._CatTipoSangre.Entity = value;
+					if ((value != null))
+					{
+						value.CatEmpleados.Add(this);
+						this._idTipoSangre = value.id;
+					}
+					else
+					{
+						this._idTipoSangre = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("CatTipoSangre");
 				}
 			}
 		}
@@ -1571,6 +1593,240 @@ namespace Altran.Data.Entities
 		{
 			this.SendPropertyChanging();
 			entity.CatEmpleado = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CatEmpresa")]
+	public partial class CatEmpresa : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _strNombre;
+		
+		private string _strRfc;
+		
+		private string _strDireccionFiscal;
+		
+		private string _strTelefono;
+		
+		private string _strEmail;
+		
+		private string _strFax;
+		
+		private EntitySet<CatProyectoEmpresa> _CatProyectoEmpresas;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnstrNombreChanging(string value);
+    partial void OnstrNombreChanged();
+    partial void OnstrRfcChanging(string value);
+    partial void OnstrRfcChanged();
+    partial void OnstrDireccionFiscalChanging(string value);
+    partial void OnstrDireccionFiscalChanged();
+    partial void OnstrTelefonoChanging(string value);
+    partial void OnstrTelefonoChanged();
+    partial void OnstrEmailChanging(string value);
+    partial void OnstrEmailChanged();
+    partial void OnstrFaxChanging(string value);
+    partial void OnstrFaxChanged();
+    #endregion
+		
+		public CatEmpresa()
+		{
+			this._CatProyectoEmpresas = new EntitySet<CatProyectoEmpresa>(new Action<CatProyectoEmpresa>(this.attach_CatProyectoEmpresas), new Action<CatProyectoEmpresa>(this.detach_CatProyectoEmpresas));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strNombre", DbType="VarChar(350) NOT NULL", CanBeNull=false)]
+		public string strNombre
+		{
+			get
+			{
+				return this._strNombre;
+			}
+			set
+			{
+				if ((this._strNombre != value))
+				{
+					this.OnstrNombreChanging(value);
+					this.SendPropertyChanging();
+					this._strNombre = value;
+					this.SendPropertyChanged("strNombre");
+					this.OnstrNombreChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strRfc", DbType="VarChar(250)")]
+		public string strRfc
+		{
+			get
+			{
+				return this._strRfc;
+			}
+			set
+			{
+				if ((this._strRfc != value))
+				{
+					this.OnstrRfcChanging(value);
+					this.SendPropertyChanging();
+					this._strRfc = value;
+					this.SendPropertyChanged("strRfc");
+					this.OnstrRfcChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strDireccionFiscal", DbType="VarChar(550)")]
+		public string strDireccionFiscal
+		{
+			get
+			{
+				return this._strDireccionFiscal;
+			}
+			set
+			{
+				if ((this._strDireccionFiscal != value))
+				{
+					this.OnstrDireccionFiscalChanging(value);
+					this.SendPropertyChanging();
+					this._strDireccionFiscal = value;
+					this.SendPropertyChanged("strDireccionFiscal");
+					this.OnstrDireccionFiscalChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strTelefono", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string strTelefono
+		{
+			get
+			{
+				return this._strTelefono;
+			}
+			set
+			{
+				if ((this._strTelefono != value))
+				{
+					this.OnstrTelefonoChanging(value);
+					this.SendPropertyChanging();
+					this._strTelefono = value;
+					this.SendPropertyChanged("strTelefono");
+					this.OnstrTelefonoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strEmail", DbType="VarChar(250)")]
+		public string strEmail
+		{
+			get
+			{
+				return this._strEmail;
+			}
+			set
+			{
+				if ((this._strEmail != value))
+				{
+					this.OnstrEmailChanging(value);
+					this.SendPropertyChanging();
+					this._strEmail = value;
+					this.SendPropertyChanged("strEmail");
+					this.OnstrEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strFax", DbType="VarChar(50)")]
+		public string strFax
+		{
+			get
+			{
+				return this._strFax;
+			}
+			set
+			{
+				if ((this._strFax != value))
+				{
+					this.OnstrFaxChanging(value);
+					this.SendPropertyChanging();
+					this._strFax = value;
+					this.SendPropertyChanged("strFax");
+					this.OnstrFaxChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatEmpresa_CatProyectoEmpresa", Storage="_CatProyectoEmpresas", ThisKey="id", OtherKey="idEmpresa")]
+		public EntitySet<CatProyectoEmpresa> CatProyectoEmpresas
+		{
+			get
+			{
+				return this._CatProyectoEmpresas;
+			}
+			set
+			{
+				this._CatProyectoEmpresas.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_CatProyectoEmpresas(CatProyectoEmpresa entity)
+		{
+			this.SendPropertyChanging();
+			entity.CatEmpresa = this;
+		}
+		
+		private void detach_CatProyectoEmpresas(CatProyectoEmpresa entity)
+		{
+			this.SendPropertyChanging();
+			entity.CatEmpresa = null;
 		}
 	}
 	
@@ -1822,7 +2078,7 @@ namespace Altran.Data.Entities
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatMarcaVehiculo_CatModeloVehiculo", Storage="_CatModeloVehiculos", ThisKey="id", OtherKey="idMarca")]
-		public EntitySet<CatModeloVehiculo> CatModeloVehiculos
+		public new EntitySet<CatModeloVehiculo> CatModeloVehiculos
 		{
 			get
 			{
@@ -1980,7 +2236,7 @@ namespace Altran.Data.Entities
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatMarcaVehiculo_CatModeloVehiculo", Storage="_CatMarcaVehiculo", ThisKey="idMarca", OtherKey="id", IsForeignKey=true)]
-		public CatMarcaVehiculo CatMarcaVehiculo
+		public new CatMarcaVehiculo CatMarcaVehiculo
 		{
 			get
 			{
@@ -2360,6 +2616,120 @@ namespace Altran.Data.Entities
 		{
 			this.SendPropertyChanging();
 			entity.CatMunicipio = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CatNacionalidad")]
+	public partial class CatNacionalidad : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _strValor;
+		
+		private EntitySet<CatEmpleado> _CatEmpleados;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnstrValorChanging(string value);
+    partial void OnstrValorChanged();
+    #endregion
+		
+		public CatNacionalidad()
+		{
+			this._CatEmpleados = new EntitySet<CatEmpleado>(new Action<CatEmpleado>(this.attach_CatEmpleados), new Action<CatEmpleado>(this.detach_CatEmpleados));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strValor", DbType="VarChar(50)")]
+		public string strValor
+		{
+			get
+			{
+				return this._strValor;
+			}
+			set
+			{
+				if ((this._strValor != value))
+				{
+					this.OnstrValorChanging(value);
+					this.SendPropertyChanging();
+					this._strValor = value;
+					this.SendPropertyChanged("strValor");
+					this.OnstrValorChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatNacionalidad_CatEmpleado", Storage="_CatEmpleados", ThisKey="id", OtherKey="idNacionalidad")]
+		public EntitySet<CatEmpleado> CatEmpleados
+		{
+			get
+			{
+				return this._CatEmpleados;
+			}
+			set
+			{
+				this._CatEmpleados.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_CatEmpleados(CatEmpleado entity)
+		{
+			this.SendPropertyChanging();
+			entity.CatNacionalidad = this;
+		}
+		
+		private void detach_CatEmpleados(CatEmpleado entity)
+		{
+			this.SendPropertyChanging();
+			entity.CatNacionalidad = null;
 		}
 	}
 	
@@ -2895,6 +3265,181 @@ namespace Altran.Data.Entities
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CatProyectoEmpresa")]
+	public partial class CatProyectoEmpresa : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _strValor;
+		
+		private string _strNumeroContrato;
+		
+		private System.Nullable<int> _idEmpresa;
+		
+		private EntityRef<CatEmpresa> _CatEmpresa;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnstrValorChanging(string value);
+    partial void OnstrValorChanged();
+    partial void OnstrNumeroContratoChanging(string value);
+    partial void OnstrNumeroContratoChanged();
+    partial void OnidEmpresaChanging(System.Nullable<int> value);
+    partial void OnidEmpresaChanged();
+    #endregion
+		
+		public CatProyectoEmpresa()
+		{
+			this._CatEmpresa = default(EntityRef<CatEmpresa>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strValor", DbType="VarChar(350)")]
+		public string strValor
+		{
+			get
+			{
+				return this._strValor;
+			}
+			set
+			{
+				if ((this._strValor != value))
+				{
+					this.OnstrValorChanging(value);
+					this.SendPropertyChanging();
+					this._strValor = value;
+					this.SendPropertyChanged("strValor");
+					this.OnstrValorChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strNumeroContrato", DbType="VarChar(250)")]
+		public string strNumeroContrato
+		{
+			get
+			{
+				return this._strNumeroContrato;
+			}
+			set
+			{
+				if ((this._strNumeroContrato != value))
+				{
+					this.OnstrNumeroContratoChanging(value);
+					this.SendPropertyChanging();
+					this._strNumeroContrato = value;
+					this.SendPropertyChanged("strNumeroContrato");
+					this.OnstrNumeroContratoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idEmpresa", DbType="Int")]
+		public System.Nullable<int> idEmpresa
+		{
+			get
+			{
+				return this._idEmpresa;
+			}
+			set
+			{
+				if ((this._idEmpresa != value))
+				{
+					if (this._CatEmpresa.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidEmpresaChanging(value);
+					this.SendPropertyChanging();
+					this._idEmpresa = value;
+					this.SendPropertyChanged("idEmpresa");
+					this.OnidEmpresaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatEmpresa_CatProyectoEmpresa", Storage="_CatEmpresa", ThisKey="idEmpresa", OtherKey="id", IsForeignKey=true)]
+		public CatEmpresa CatEmpresa
+		{
+			get
+			{
+				return this._CatEmpresa.Entity;
+			}
+			set
+			{
+				CatEmpresa previousValue = this._CatEmpresa.Entity;
+				if (((previousValue != value) 
+							|| (this._CatEmpresa.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._CatEmpresa.Entity = null;
+						previousValue.CatProyectoEmpresas.Remove(this);
+					}
+					this._CatEmpresa.Entity = value;
+					if ((value != null))
+					{
+						value.CatProyectoEmpresas.Add(this);
+						this._idEmpresa = value.id;
+					}
+					else
+					{
+						this._idEmpresa = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("CatEmpresa");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CatStatusEscolar")]
 	public partial class CatStatusEscolar : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -3372,6 +3917,504 @@ namespace Altran.Data.Entities
 		{
 			this.SendPropertyChanging();
 			entity.CatTipoVehiculo = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TblBitacoraDetalleVehiculo")]
+	public partial class TblBitacoraDetalleVehiculo : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private int _idVehiculo;
+		
+		private int _idBitacoraMantenimiento;
+		
+		private System.Nullable<System.DateTime> _dteFecha;
+		
+		private EntityRef<TblBitacoraMantenimientoVehiculo> _TblBitacoraMantenimientoVehiculo;
+		
+		private EntityRef<TblVehiculo> _TblVehiculo;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnidVehiculoChanging(int value);
+    partial void OnidVehiculoChanged();
+    partial void OnidBitacoraMantenimientoChanging(int value);
+    partial void OnidBitacoraMantenimientoChanged();
+    partial void OndteFechaChanging(System.Nullable<System.DateTime> value);
+    partial void OndteFechaChanged();
+    #endregion
+		
+		public TblBitacoraDetalleVehiculo()
+		{
+			this._TblBitacoraMantenimientoVehiculo = default(EntityRef<TblBitacoraMantenimientoVehiculo>);
+			this._TblVehiculo = default(EntityRef<TblVehiculo>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idVehiculo", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int idVehiculo
+		{
+			get
+			{
+				return this._idVehiculo;
+			}
+			set
+			{
+				if ((this._idVehiculo != value))
+				{
+					if (this._TblVehiculo.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidVehiculoChanging(value);
+					this.SendPropertyChanging();
+					this._idVehiculo = value;
+					this.SendPropertyChanged("idVehiculo");
+					this.OnidVehiculoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idBitacoraMantenimiento", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int idBitacoraMantenimiento
+		{
+			get
+			{
+				return this._idBitacoraMantenimiento;
+			}
+			set
+			{
+				if ((this._idBitacoraMantenimiento != value))
+				{
+					if (this._TblBitacoraMantenimientoVehiculo.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidBitacoraMantenimientoChanging(value);
+					this.SendPropertyChanging();
+					this._idBitacoraMantenimiento = value;
+					this.SendPropertyChanged("idBitacoraMantenimiento");
+					this.OnidBitacoraMantenimientoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dteFecha", DbType="Date")]
+		public System.Nullable<System.DateTime> dteFecha
+		{
+			get
+			{
+				return this._dteFecha;
+			}
+			set
+			{
+				if ((this._dteFecha != value))
+				{
+					this.OndteFechaChanging(value);
+					this.SendPropertyChanging();
+					this._dteFecha = value;
+					this.SendPropertyChanged("dteFecha");
+					this.OndteFechaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblBitacoraMantenimientoVehiculo_TblBitacoraDetalleVehiculo", Storage="_TblBitacoraMantenimientoVehiculo", ThisKey="idBitacoraMantenimiento", OtherKey="id", IsForeignKey=true)]
+		public TblBitacoraMantenimientoVehiculo TblBitacoraMantenimientoVehiculo
+		{
+			get
+			{
+				return this._TblBitacoraMantenimientoVehiculo.Entity;
+			}
+			set
+			{
+				TblBitacoraMantenimientoVehiculo previousValue = this._TblBitacoraMantenimientoVehiculo.Entity;
+				if (((previousValue != value) 
+							|| (this._TblBitacoraMantenimientoVehiculo.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TblBitacoraMantenimientoVehiculo.Entity = null;
+						previousValue.TblBitacoraDetalleVehiculos.Remove(this);
+					}
+					this._TblBitacoraMantenimientoVehiculo.Entity = value;
+					if ((value != null))
+					{
+						value.TblBitacoraDetalleVehiculos.Add(this);
+						this._idBitacoraMantenimiento = value.id;
+					}
+					else
+					{
+						this._idBitacoraMantenimiento = default(int);
+					}
+					this.SendPropertyChanged("TblBitacoraMantenimientoVehiculo");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblVehiculo_TblBitacoraDetalleVehiculo", Storage="_TblVehiculo", ThisKey="idVehiculo", OtherKey="id", IsForeignKey=true)]
+		public TblVehiculo TblVehiculo
+		{
+			get
+			{
+				return this._TblVehiculo.Entity;
+			}
+			set
+			{
+				TblVehiculo previousValue = this._TblVehiculo.Entity;
+				if (((previousValue != value) 
+							|| (this._TblVehiculo.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TblVehiculo.Entity = null;
+						previousValue.TblBitacoraDetalleVehiculos.Remove(this);
+					}
+					this._TblVehiculo.Entity = value;
+					if ((value != null))
+					{
+						value.TblBitacoraDetalleVehiculos.Add(this);
+						this._idVehiculo = value.id;
+					}
+					else
+					{
+						this._idVehiculo = default(int);
+					}
+					this.SendPropertyChanged("TblVehiculo");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TblBitacoraMantenimientoVehiculo")]
+	public partial class TblBitacoraMantenimientoVehiculo : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private System.Nullable<System.DateTime> _dteFecha;
+		
+		private string _strClasificacion;
+		
+		private string _strKilometrajeAlMomento;
+		
+		private string _strTrabajoRealizado;
+		
+		private string _strMecanico;
+		
+		private System.Nullable<decimal> _dceCosto;
+		
+		private System.Nullable<System.DateTime> _dteFechaProximoMantenimiento;
+		
+		private string _strNotas;
+		
+		private EntitySet<TblBitacoraDetalleVehiculo> _TblBitacoraDetalleVehiculos;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OndteFechaChanging(System.Nullable<System.DateTime> value);
+    partial void OndteFechaChanged();
+    partial void OnstrClasificacionChanging(string value);
+    partial void OnstrClasificacionChanged();
+    partial void OnstrKilometrajeAlMomentoChanging(string value);
+    partial void OnstrKilometrajeAlMomentoChanged();
+    partial void OnstrTrabajoRealizadoChanging(string value);
+    partial void OnstrTrabajoRealizadoChanged();
+    partial void OnstrMecanicoChanging(string value);
+    partial void OnstrMecanicoChanged();
+    partial void OndceCostoChanging(System.Nullable<decimal> value);
+    partial void OndceCostoChanged();
+    partial void OndteFechaProximoMantenimientoChanging(System.Nullable<System.DateTime> value);
+    partial void OndteFechaProximoMantenimientoChanged();
+    partial void OnstrNotasChanging(string value);
+    partial void OnstrNotasChanged();
+    #endregion
+		
+		public TblBitacoraMantenimientoVehiculo()
+		{
+			this._TblBitacoraDetalleVehiculos = new EntitySet<TblBitacoraDetalleVehiculo>(new Action<TblBitacoraDetalleVehiculo>(this.attach_TblBitacoraDetalleVehiculos), new Action<TblBitacoraDetalleVehiculo>(this.detach_TblBitacoraDetalleVehiculos));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dteFecha", DbType="Date")]
+		public System.Nullable<System.DateTime> dteFecha
+		{
+			get
+			{
+				return this._dteFecha;
+			}
+			set
+			{
+				if ((this._dteFecha != value))
+				{
+					this.OndteFechaChanging(value);
+					this.SendPropertyChanging();
+					this._dteFecha = value;
+					this.SendPropertyChanged("dteFecha");
+					this.OndteFechaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strClasificacion", DbType="VarChar(100)")]
+		public string strClasificacion
+		{
+			get
+			{
+				return this._strClasificacion;
+			}
+			set
+			{
+				if ((this._strClasificacion != value))
+				{
+					this.OnstrClasificacionChanging(value);
+					this.SendPropertyChanging();
+					this._strClasificacion = value;
+					this.SendPropertyChanged("strClasificacion");
+					this.OnstrClasificacionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strKilometrajeAlMomento", DbType="VarChar(100)")]
+		public string strKilometrajeAlMomento
+		{
+			get
+			{
+				return this._strKilometrajeAlMomento;
+			}
+			set
+			{
+				if ((this._strKilometrajeAlMomento != value))
+				{
+					this.OnstrKilometrajeAlMomentoChanging(value);
+					this.SendPropertyChanging();
+					this._strKilometrajeAlMomento = value;
+					this.SendPropertyChanged("strKilometrajeAlMomento");
+					this.OnstrKilometrajeAlMomentoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strTrabajoRealizado", DbType="VarChar(MAX)")]
+		public string strTrabajoRealizado
+		{
+			get
+			{
+				return this._strTrabajoRealizado;
+			}
+			set
+			{
+				if ((this._strTrabajoRealizado != value))
+				{
+					this.OnstrTrabajoRealizadoChanging(value);
+					this.SendPropertyChanging();
+					this._strTrabajoRealizado = value;
+					this.SendPropertyChanged("strTrabajoRealizado");
+					this.OnstrTrabajoRealizadoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strMecanico", DbType="VarChar(100)")]
+		public string strMecanico
+		{
+			get
+			{
+				return this._strMecanico;
+			}
+			set
+			{
+				if ((this._strMecanico != value))
+				{
+					this.OnstrMecanicoChanging(value);
+					this.SendPropertyChanging();
+					this._strMecanico = value;
+					this.SendPropertyChanged("strMecanico");
+					this.OnstrMecanicoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dceCosto", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> dceCosto
+		{
+			get
+			{
+				return this._dceCosto;
+			}
+			set
+			{
+				if ((this._dceCosto != value))
+				{
+					this.OndceCostoChanging(value);
+					this.SendPropertyChanging();
+					this._dceCosto = value;
+					this.SendPropertyChanged("dceCosto");
+					this.OndceCostoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dteFechaProximoMantenimiento", DbType="Date")]
+		public System.Nullable<System.DateTime> dteFechaProximoMantenimiento
+		{
+			get
+			{
+				return this._dteFechaProximoMantenimiento;
+			}
+			set
+			{
+				if ((this._dteFechaProximoMantenimiento != value))
+				{
+					this.OndteFechaProximoMantenimientoChanging(value);
+					this.SendPropertyChanging();
+					this._dteFechaProximoMantenimiento = value;
+					this.SendPropertyChanged("dteFechaProximoMantenimiento");
+					this.OndteFechaProximoMantenimientoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strNotas", DbType="VarChar(MAX)")]
+		public string strNotas
+		{
+			get
+			{
+				return this._strNotas;
+			}
+			set
+			{
+				if ((this._strNotas != value))
+				{
+					this.OnstrNotasChanging(value);
+					this.SendPropertyChanging();
+					this._strNotas = value;
+					this.SendPropertyChanged("strNotas");
+					this.OnstrNotasChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblBitacoraMantenimientoVehiculo_TblBitacoraDetalleVehiculo", Storage="_TblBitacoraDetalleVehiculos", ThisKey="id", OtherKey="idBitacoraMantenimiento")]
+		public EntitySet<TblBitacoraDetalleVehiculo> TblBitacoraDetalleVehiculos
+		{
+			get
+			{
+				return this._TblBitacoraDetalleVehiculos;
+			}
+			set
+			{
+				this._TblBitacoraDetalleVehiculos.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_TblBitacoraDetalleVehiculos(TblBitacoraDetalleVehiculo entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblBitacoraMantenimientoVehiculo = this;
+		}
+		
+		private void detach_TblBitacoraDetalleVehiculos(TblBitacoraDetalleVehiculo entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblBitacoraMantenimientoVehiculo = null;
 		}
 	}
 	
@@ -5941,9 +6984,13 @@ namespace Altran.Data.Entities
 		
 		private System.Nullable<decimal> _dceRendimiento;
 		
+		private string _strPlacas;
+		
 		private System.Nullable<int> _idTipoVehiculo;
 		
 		private System.Nullable<int> _idModelo;
+		
+		private EntitySet<TblBitacoraDetalleVehiculo> _TblBitacoraDetalleVehiculos;
 		
 		private EntityRef<CatModeloVehiculo> _CatModeloVehiculo;
 		
@@ -5985,6 +7032,8 @@ namespace Altran.Data.Entities
     partial void OndceCapacidadCombusChanged();
     partial void OndceRendimientoChanging(System.Nullable<decimal> value);
     partial void OndceRendimientoChanged();
+    partial void OnstrPlacasChanging(string value);
+    partial void OnstrPlacasChanged();
     partial void OnidTipoVehiculoChanging(System.Nullable<int> value);
     partial void OnidTipoVehiculoChanged();
     partial void OnidModeloChanging(System.Nullable<int> value);
@@ -5993,6 +7042,7 @@ namespace Altran.Data.Entities
 		
 		public TblVehiculo()
 		{
+			this._TblBitacoraDetalleVehiculos = new EntitySet<TblBitacoraDetalleVehiculo>(new Action<TblBitacoraDetalleVehiculo>(this.attach_TblBitacoraDetalleVehiculos), new Action<TblBitacoraDetalleVehiculo>(this.detach_TblBitacoraDetalleVehiculos));
 			this._CatModeloVehiculo = default(EntityRef<CatModeloVehiculo>);
 			this._CatTipoVehiculo = default(EntityRef<CatTipoVehiculo>);
 			OnCreated();
@@ -6318,6 +7368,26 @@ namespace Altran.Data.Entities
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strPlacas", DbType="VarChar(50)")]
+		public string strPlacas
+		{
+			get
+			{
+				return this._strPlacas;
+			}
+			set
+			{
+				if ((this._strPlacas != value))
+				{
+					this.OnstrPlacasChanging(value);
+					this.SendPropertyChanging();
+					this._strPlacas = value;
+					this.SendPropertyChanged("strPlacas");
+					this.OnstrPlacasChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idTipoVehiculo", DbType="Int")]
 		public System.Nullable<int> idTipoVehiculo
 		{
@@ -6366,8 +7436,21 @@ namespace Altran.Data.Entities
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblVehiculo_TblBitacoraDetalleVehiculo", Storage="_TblBitacoraDetalleVehiculos", ThisKey="id", OtherKey="idVehiculo")]
+		public EntitySet<TblBitacoraDetalleVehiculo> TblBitacoraDetalleVehiculos
+		{
+			get
+			{
+				return this._TblBitacoraDetalleVehiculos;
+			}
+			set
+			{
+				this._TblBitacoraDetalleVehiculos.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatModeloVehiculo_TblVehiculo", Storage="_CatModeloVehiculo", ThisKey="idModelo", OtherKey="id", IsForeignKey=true)]
-		public CatModeloVehiculo CatModeloVehiculo
+		public new CatModeloVehiculo CatModeloVehiculo
 		{
 			get
 			{
@@ -6453,528 +7536,17 @@ namespace Altran.Data.Entities
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CatNacionalidad")]
-	public partial class CatNacionalidad : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private string _strValor;
-		
-		private EntitySet<CatEmpleado> _CatEmpleados;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnstrValorChanging(string value);
-    partial void OnstrValorChanged();
-    #endregion
-		
-		public CatNacionalidad()
-		{
-			this._CatEmpleados = new EntitySet<CatEmpleado>(new Action<CatEmpleado>(this.attach_CatEmpleados), new Action<CatEmpleado>(this.detach_CatEmpleados));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strValor", DbType="VarChar(50)")]
-		public string strValor
-		{
-			get
-			{
-				return this._strValor;
-			}
-			set
-			{
-				if ((this._strValor != value))
-				{
-					this.OnstrValorChanging(value);
-					this.SendPropertyChanging();
-					this._strValor = value;
-					this.SendPropertyChanged("strValor");
-					this.OnstrValorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatNacionalidad_CatEmpleado", Storage="_CatEmpleados", ThisKey="id", OtherKey="idNacionalidad")]
-		public EntitySet<CatEmpleado> CatEmpleados
-		{
-			get
-			{
-				return this._CatEmpleados;
-			}
-			set
-			{
-				this._CatEmpleados.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_CatEmpleados(CatEmpleado entity)
+		private void attach_TblBitacoraDetalleVehiculos(TblBitacoraDetalleVehiculo entity)
 		{
 			this.SendPropertyChanging();
-			entity.CatNacionalidad = this;
+			entity.TblVehiculo = this;
 		}
 		
-		private void detach_CatEmpleados(CatEmpleado entity)
+		private void detach_TblBitacoraDetalleVehiculos(TblBitacoraDetalleVehiculo entity)
 		{
 			this.SendPropertyChanging();
-			entity.CatNacionalidad = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CatProyectoEmpresa")]
-	public partial class CatProyectoEmpresa : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private string _strValor;
-		
-		private string _strNumeroContrato;
-		
-		private System.Nullable<int> _idEmpresa;
-		
-		private EntityRef<CatEmpresa> _CatEmpresa;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnstrValorChanging(string value);
-    partial void OnstrValorChanged();
-    partial void OnstrNumeroContratoChanging(string value);
-    partial void OnstrNumeroContratoChanged();
-    partial void OnidEmpresaChanging(System.Nullable<int> value);
-    partial void OnidEmpresaChanged();
-    #endregion
-		
-		public CatProyectoEmpresa()
-		{
-			this._CatEmpresa = default(EntityRef<CatEmpresa>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strValor", DbType="VarChar(350)")]
-		public string strValor
-		{
-			get
-			{
-				return this._strValor;
-			}
-			set
-			{
-				if ((this._strValor != value))
-				{
-					this.OnstrValorChanging(value);
-					this.SendPropertyChanging();
-					this._strValor = value;
-					this.SendPropertyChanged("strValor");
-					this.OnstrValorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strNumeroContrato", DbType="VarChar(250)")]
-		public string strNumeroContrato
-		{
-			get
-			{
-				return this._strNumeroContrato;
-			}
-			set
-			{
-				if ((this._strNumeroContrato != value))
-				{
-					this.OnstrNumeroContratoChanging(value);
-					this.SendPropertyChanging();
-					this._strNumeroContrato = value;
-					this.SendPropertyChanged("strNumeroContrato");
-					this.OnstrNumeroContratoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idEmpresa", DbType="Int")]
-		public System.Nullable<int> idEmpresa
-		{
-			get
-			{
-				return this._idEmpresa;
-			}
-			set
-			{
-				if ((this._idEmpresa != value))
-				{
-					if (this._CatEmpresa.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidEmpresaChanging(value);
-					this.SendPropertyChanging();
-					this._idEmpresa = value;
-					this.SendPropertyChanged("idEmpresa");
-					this.OnidEmpresaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatEmpresa_CatProyectoEmpresa", Storage="_CatEmpresa", ThisKey="idEmpresa", OtherKey="id", IsForeignKey=true)]
-		public CatEmpresa CatEmpresa
-		{
-			get
-			{
-				return this._CatEmpresa.Entity;
-			}
-			set
-			{
-				CatEmpresa previousValue = this._CatEmpresa.Entity;
-				if (((previousValue != value) 
-							|| (this._CatEmpresa.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._CatEmpresa.Entity = null;
-						previousValue.CatProyectoEmpresas.Remove(this);
-					}
-					this._CatEmpresa.Entity = value;
-					if ((value != null))
-					{
-						value.CatProyectoEmpresas.Add(this);
-						this._idEmpresa = value.id;
-					}
-					else
-					{
-						this._idEmpresa = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("CatEmpresa");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CatEmpresa")]
-	public partial class CatEmpresa : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private string _strNombre;
-		
-		private string _strRfc;
-		
-		private string _strDireccionFiscal;
-		
-		private string _strTelefono;
-		
-		private string _strEmail;
-		
-		private string _strFax;
-		
-		private EntitySet<CatProyectoEmpresa> _CatProyectoEmpresas;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnstrNombreChanging(string value);
-    partial void OnstrNombreChanged();
-    partial void OnstrRfcChanging(string value);
-    partial void OnstrRfcChanged();
-    partial void OnstrDireccionFiscalChanging(string value);
-    partial void OnstrDireccionFiscalChanged();
-    partial void OnstrTelefonoChanging(string value);
-    partial void OnstrTelefonoChanged();
-    partial void OnstrEmailChanging(string value);
-    partial void OnstrEmailChanged();
-    partial void OnstrFaxChanging(string value);
-    partial void OnstrFaxChanged();
-    #endregion
-		
-		public CatEmpresa()
-		{
-			this._CatProyectoEmpresas = new EntitySet<CatProyectoEmpresa>(new Action<CatProyectoEmpresa>(this.attach_CatProyectoEmpresas), new Action<CatProyectoEmpresa>(this.detach_CatProyectoEmpresas));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strNombre", DbType="VarChar(350) NOT NULL", CanBeNull=false)]
-		public string strNombre
-		{
-			get
-			{
-				return this._strNombre;
-			}
-			set
-			{
-				if ((this._strNombre != value))
-				{
-					this.OnstrNombreChanging(value);
-					this.SendPropertyChanging();
-					this._strNombre = value;
-					this.SendPropertyChanged("strNombre");
-					this.OnstrNombreChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strRfc", DbType="VarChar(250)")]
-		public string strRfc
-		{
-			get
-			{
-				return this._strRfc;
-			}
-			set
-			{
-				if ((this._strRfc != value))
-				{
-					this.OnstrRfcChanging(value);
-					this.SendPropertyChanging();
-					this._strRfc = value;
-					this.SendPropertyChanged("strRfc");
-					this.OnstrRfcChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strDireccionFiscal", DbType="VarChar(550)")]
-		public string strDireccionFiscal
-		{
-			get
-			{
-				return this._strDireccionFiscal;
-			}
-			set
-			{
-				if ((this._strDireccionFiscal != value))
-				{
-					this.OnstrDireccionFiscalChanging(value);
-					this.SendPropertyChanging();
-					this._strDireccionFiscal = value;
-					this.SendPropertyChanged("strDireccionFiscal");
-					this.OnstrDireccionFiscalChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strTelefono", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string strTelefono
-		{
-			get
-			{
-				return this._strTelefono;
-			}
-			set
-			{
-				if ((this._strTelefono != value))
-				{
-					this.OnstrTelefonoChanging(value);
-					this.SendPropertyChanging();
-					this._strTelefono = value;
-					this.SendPropertyChanged("strTelefono");
-					this.OnstrTelefonoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strEmail", DbType="VarChar(250)")]
-		public string strEmail
-		{
-			get
-			{
-				return this._strEmail;
-			}
-			set
-			{
-				if ((this._strEmail != value))
-				{
-					this.OnstrEmailChanging(value);
-					this.SendPropertyChanging();
-					this._strEmail = value;
-					this.SendPropertyChanged("strEmail");
-					this.OnstrEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strFax", DbType="VarChar(50)")]
-		public string strFax
-		{
-			get
-			{
-				return this._strFax;
-			}
-			set
-			{
-				if ((this._strFax != value))
-				{
-					this.OnstrFaxChanging(value);
-					this.SendPropertyChanging();
-					this._strFax = value;
-					this.SendPropertyChanged("strFax");
-					this.OnstrFaxChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatEmpresa_CatProyectoEmpresa", Storage="_CatProyectoEmpresas", ThisKey="id", OtherKey="idEmpresa")]
-		public EntitySet<CatProyectoEmpresa> CatProyectoEmpresas
-		{
-			get
-			{
-				return this._CatProyectoEmpresas;
-			}
-			set
-			{
-				this._CatProyectoEmpresas.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_CatProyectoEmpresas(CatProyectoEmpresa entity)
-		{
-			this.SendPropertyChanging();
-			entity.CatEmpresa = this;
-		}
-		
-		private void detach_CatProyectoEmpresas(CatProyectoEmpresa entity)
-		{
-			this.SendPropertyChanging();
-			entity.CatEmpresa = null;
+			entity.TblVehiculo = null;
 		}
 	}
 }

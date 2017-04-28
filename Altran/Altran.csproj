@@ -450,6 +450,7 @@
     <Content Include="Imagenes\editrecord_16x16.png" />
     <Content Include="Imagenes\edit_16x16.png" />
     <Content Include="Imagenes\imagesEdit.jpg" />
+    <None Include="Properties\PublishProfiles\perfil_base.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Imagenes\loader.gif" />
     <Content Include="login.aspx" />
@@ -802,6 +803,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="UI\Bitacora\agregar.aspx" />
     <Content Include="UI\Empleado\agregar.aspx" />
     <Content Include="UI\Empresa\administrar.aspx" />
     <Content Include="UI\Empresa\agregar.aspx" />
@@ -984,6 +986,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="UI\Bitacora\agregar.aspx.cs">
+      <DependentUpon>agregar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Bitacora\agregar.aspx.designer.cs">
+      <DependentUpon>agregar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\Empleado\agregar.aspx.cs">
       <DependentUpon>agregar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
