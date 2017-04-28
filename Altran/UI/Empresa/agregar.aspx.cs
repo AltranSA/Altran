@@ -43,7 +43,7 @@ namespace Altran.UI.Empresa
             catEmpresa.strNombre = txtNombre.Text.Trim().ToUpper();
             catEmpresa.strRfc = txtRazonSocial.Text.Trim().ToUpper();
             catEmpresa.strDireccionFiscal = txtDireccionFiscal.Text.Trim().ToUpper();
-            catEmpresa.idTelefono = 1;
+            catEmpresa.strTelefono = this.txtTelefono.Text;
             catEmpresa.strEmail = txtMail.Text;
             catEmpresa.strFax = txtFax.Text.Trim().ToUpper();
             

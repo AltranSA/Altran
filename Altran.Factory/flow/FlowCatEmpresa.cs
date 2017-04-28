@@ -71,6 +71,33 @@ namespace Altran.Factory.flow
             return catEmpresas;
         }
 
+        public bool upadte(CatEmpresa entidad)
+        {
+            bool respuesta = false;
+            try
+            {
+                using (DCAltranDataContext contexto = new DCAltranDataContext())
+                {
+                    CatEmpresa empresa = contexto.CatEmpresas.Where(p => p.id == entidad.id).First<CatEmpresa>();
+                    empresa.strNombre = entidad.strNombre;
+                    empresa.strRfc = entidad.strRfc;
+                    empresa.strTelefono = entidad.strTelefono;
+                    empresa.strDireccionFiscal = entidad.strDireccionFiscal;
+                    empresa.strEmail = entidad.strEmail;
+                    empresa.strFax = entidad.strFax;
+                    contexto.SubmitChanges();
+                    contexto.Refresh(RefreshMode.KeepChanges);
+                    respuesta = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                string mensajeErr = ex.Message;
+            }
+            return respuesta;
+        }
+
+
 
     }
 }
